@@ -1,7 +1,7 @@
 <template>
         <div>
                 <article class="prose prose-lg prose-img:rounded-xl prose-headings:no-underline p-16 max-w-3xl m-auto">
-                        <img class="h-64 w-full object-cover" :src="data.img" alt="">
+                        <img class="h-96 w-full object-cover" :src="data.img" alt="">
 
                         <ContentRenderer :value="data">
                                 <ContentRenderer :value="data" />
