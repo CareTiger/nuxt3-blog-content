@@ -2,21 +2,17 @@
         <div>
                 <!-- Get a specific document         -->
                 <article class="prose prose-lg p-16 max-w-3xl m-auto">
-
-                        <!--  Using the ContentDoc component -->
-                        <ContentDoc path="" v-slot="{ doc }">                     
-                                <div class="first-letter:text-7xl first-letter:text-slate-600">
-                                        <ContentRenderer :value="doc" />
-                                </div>
-                        </ContentDoc>
-                        
-
+                        <ContentRenderer :value="data">
+                                <h1>{{ data.title }}</h1>
+                                <ContentRenderer :value="data" />
+                        </ContentRenderer>
                 </article>
         </div>
 </template>
 
 <script setup>
 const { path } = useRoute();
-
-console.log("path", path)
+const { data } = await useAsyncData(`content-${path}`, () => {
+        return queryContent().where({ _path: path }).findOne()
+})
 </script>
