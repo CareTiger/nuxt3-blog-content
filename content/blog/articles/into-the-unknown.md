@@ -10,7 +10,11 @@ author:
 tags: 
   - web development
 createdAt: 2022-03-15
-updatedAt: 2022-03-15  
+updatedAt: 2022-03-15
+relatedArticles: 
+  - my-second-post
+  - such-a-good-title
+  - what-we-know
 ---
 # Hello this article explores the unknown
 

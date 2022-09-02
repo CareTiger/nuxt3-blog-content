@@ -18,6 +18,8 @@
                                 <ContentRenderer :value="data">
                                         <ContentRenderer :value="data" />
                                 </ContentRenderer>
+                                <!-- This is where you will get related articles -->
+                                {{getRelatedArticles(data.relatedArticles)}}
                         </div>
                 </article>
         </div>
@@ -28,5 +30,13 @@ const { path } = useRoute();
 const { data } = await useAsyncData(`content-${path}`, () => {
         return queryContent().where({ _path: path }).findOne()
 })
+
+function getRelatedArticles(data) {
+
+        for (let index=0; index<data.length; index++) {
+                console.log(data[index])
+        }
+}
+
 
 </script>
