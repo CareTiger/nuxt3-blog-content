@@ -25,9 +25,9 @@
     <!-- All articles - TODO sort be recent -->
         <h1 class="text-4xl border-b border-gray-400 py-10">Recent articles</h1>    
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 m-10 mx-auto" >
-            <div class="h-full" v-for="article in articles" :key="article._path">
-                <nuxt-link  :to="`${article._path}`">
-                    <div class=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div class="col-span-1" v-for="article in articles" :key="article._path">
+                <nuxt-link class="" :to="`${article._path}`">
+                    <div class="flex flex-col h-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                         <img class="rounded-t-lg h-64 w-full object-cover" :src="article.img" alt="" />
                         <div class="p-5">
                             <h5 class="mb-2 text-normal font-bold tracking-tight text-gray-900 dark:text-white">{{article.title}}</h5>

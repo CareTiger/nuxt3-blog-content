@@ -10,6 +10,8 @@ author:
 tags: 
   - nuxtjs
   - javascript
+createdAt: 2022-05-15
+updatedAt: 2022-05-15  
 ---
 
 Welcome to my first blog post using content module
