@@ -13,7 +13,7 @@ createdAt: 2022-06-15
 updatedAt: 2022-06-15  
 ---
 
-## Welcome to my second blog post using content module
+# Welcome to my second blog post using content module
 
 ## This is a heading
 This is some more info

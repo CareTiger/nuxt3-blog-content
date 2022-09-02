@@ -14,7 +14,7 @@ createdAt: 2022-05-15
 updatedAt: 2022-05-15  
 ---
 
-Welcome to my first blog post using content module
+# Welcome to my first blog post using content module
 
 ## This is a heading
 This is some more info
