@@ -1,5 +1,5 @@
 <template>
-        <div class="mt-16">
+        <div class="md:mt-16">
                 <article class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2">
                         <div>
                                 <img class="h-48 md:h-full w-full object-cover" :src="data.img" alt="">
