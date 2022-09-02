@@ -1,8 +1,8 @@
 <template>
-    <div class="min-h-screen">
+    <div >
         <Header />
 
-        <div class="border border-red-500">
+        <div class="border border-red-500 min-h-screen">
             <slot />
         </div>
         
