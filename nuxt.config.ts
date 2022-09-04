@@ -7,9 +7,5 @@ export default defineNuxtConfig({
     ],
     content: {
     // https://content.nuxtjs.org/api/configuration
-    },
-    buildModules: [
-        // Simple usage
-        '@nuxtjs/moment',
-    ]    
+    }, 
 })

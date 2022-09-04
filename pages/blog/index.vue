@@ -2,6 +2,17 @@
 <script setup>
     const articles = await queryContent('blog/articles').sort({ updatedAt: -1 }).find()
     const featuredArticles = await queryContent('blog/articles').where({ tags: {$contains: ['featured']} }).find()
+    const formatDate = (date) => {
+        return new Date(date).toLocaleDateString(
+            'en-gb',
+            {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                timeZone: 'utc'
+            }
+        )
+    }
 </script>
 
 <template>
@@ -24,7 +35,7 @@
                                 <p class="text-normal ml-4 dark:text-gray-400">{{article.author.name}}</p>                                                              
                             </div>
                             <div class="m-4">
-                                <p class="text-sm dark:text-gray-400">{{$moment(article.updatedAt).format("MMM Do, YYYY") }}</p>
+                                <p class="text-sm dark:text-gray-400">{{ formatDate(article.updatedAt) }}</p>
                             </div>
                         </div>
                     </div>            
@@ -48,7 +59,7 @@
                                 <p class="text-sm ml-4 dark:text-gray-400">{{article.author.name}}</p>                                                              
                             </div>
                             <div class="m-4">
-                                <p class="text-sm dark:text-gray-400">{{$moment(article.updatedAt).format("MMM Do, YYYY") }}</p>
+                                <p class="text-sm dark:text-gray-400">{{ formatDate(article.updatedAt)  }}</p>
                             </div>
                         </div>                        
                     </div>            
