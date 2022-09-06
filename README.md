@@ -1,7 +1,12 @@
-TODO At the bottom of an article have a section calling to action like sign up to newsletter or the application
-TODO At the bottom of an article have a section with "Related Articles"
-TODO in article clicking on the Author should bring up articles by that author
-TODO how to use vue components inside a markdown
+# TODO At the bottom of an article have a section calling to action like sign up to newsletter or the application
+# TODO At the bottom of an article have a section with "Related Articles"
+# TODO in article clicking on the Author should bring up articles by that author
+# TODO how to use vue components inside a markdown
+# TODO fix navbar for mobile
+# TODO check text in dark mode
+# TODO change the logo on the navbar
+# TODO enable search content
+# TODO enable social media share
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
