@@ -3,6 +3,7 @@
     const articles = await queryContent('blog/articles').sort({ updatedAt: -1 }).find()
     const featuredArticles = await queryContent('blog/articles').where({ tags: {$contains: ['featured']} }).find()
     const formatDate = (date) => {
+        console.log(date)
         return new Date(date).toLocaleDateString(
             'en-gb',
             {
@@ -19,7 +20,7 @@
     <main class="mx-4 md:mx-20">
 <!-- Using queryContent -->
     <!-- Featured articles - -->
-        <h1 class="text-4xl border-b border-gray-400 py-10">Featured articles</h1>
+        <h1 class="text-4xl border-b border-gray-400 py-10 dark:text-white">Featured articles</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 m-10 mx-auto" >
             <div class="flex-grow" v-for="article in featuredArticles" :key="article._path">
                 <nuxt-link  :to="`${article._path}`">
@@ -43,7 +44,7 @@
             </div>
         </div>      
     <!-- All articles  -->
-        <h1 class="text-4xl border-b border-gray-400 py-10">Recent articles</h1>    
+        <h1 class="text-4xl border-b border-gray-400 py-10 dark:text-white">Recent articles</h1>    
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 m-10 mx-auto" >
             <div class="col-span-1" v-for="article in articles" :key="article._path">
                 <nuxt-link class="" :to="`${article._path}`">
