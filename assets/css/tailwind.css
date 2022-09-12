@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .links-decoration {
+        a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
