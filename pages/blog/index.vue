@@ -1,5 +1,5 @@
 <script setup>
-const {getFormattedDate, tagDetails, authorDetails} = useUtils();
+const { authorDetails, getFormattedDate, tagDetails } = useUtils();
 
 const articles = await queryContent("blog/articles")
     .sort({ updatedAt: -1 })
