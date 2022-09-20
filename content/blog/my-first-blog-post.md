@@ -10,6 +10,7 @@ author:
 tags:
     - nuxtjs
     - javascript
+featured: true
 createdAt: 2022-05-15
 updatedAt: 2022-05-15
 ---

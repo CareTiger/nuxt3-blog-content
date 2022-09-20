@@ -15,6 +15,7 @@ relatedArticles:
     - my-second-post
     - such-a-good-title
     - what-we-know
+featured: true
 ---
 
 # Hello this article is great - h2
