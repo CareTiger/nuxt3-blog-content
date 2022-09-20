@@ -34,52 +34,60 @@ const authorDetails = (author) => {
                 v-for="article in featuredArticles"
                 :key="article._path"
             >
-                <nuxt-link :to="`${article._path}`">
-                    <div
-                        class="flex flex-col justify-between h-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-                    >
-                        <img
-                            class="rounded-t-lg h-64 w-full object-cover"
-                            :src="article.img"
-                            alt=""
-                        />
-                        <div class="p-5">
-                            <h5
-                                class="mb-2 text-normal font-bold tracking-tight text-gray-900 dark:text-white"
-                            >
-                                {{ article.title }}
-                            </h5>
-                            <p
-                                class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm"
-                            >
-                                {{ article.description }}
-                            </p>
-                            <p>{{ article.tags }}</p>
-                            <div>
-                                <p>{{ authorDetails(author) }}</p>
+                <div class="flex flex-col justify-between h-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+
+
+                    <nuxt-link :to="`${article._path}`">
+                        <div
+                            
+                        >
+                            <img
+                                class="rounded-t-lg h-64 w-full object-cover"
+                                :src="article.img"
+                                alt=""
+                            />
+                            <div class="p-5">
+                                <h5
+                                    class="mb-2 text-normal font-bold tracking-tight text-gray-900 dark:text-white"
+                                >
+                                    {{ article.title }}
+                                </h5>
+                                <p
+                                    class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm"
+                                >
+                                    {{ article.description }}
+                                </p>
+                                
                             </div>
                         </div>
-                        <div class="flex flex-row justify-between items-center">
-                            <div
-                                class="m-4 flex flex-col items-center"
-                                v-for="author in article.author"
-                                :key="author.name"
-                            >
-                                <img
-                                    class="w-12 h-12 rounded-full shadow-lg object-cover"
-                                    :src="authorDetails(author).img"
-                                    alt="Bonnie image"
-                                />
-                                <p>{{ authorDetails(author).name }}</p>
-                            </div>
-                            <div class="m-4">
-                                <p class="text-sm dark:text-gray-400">
-                                    {{ formatDate(article.updatedAt) }}
-                                </p>
-                            </div>
+                    </nuxt-link>
+
+                    <div>
+                        <p>{{ article.tags }}</p>
+                    </div>
+
+                    <div class="flex flex-row justify-between items-center">
+                        <div
+                            class="m-4 flex flex-col items-center"
+                            v-for="author in article.author"
+                            :key="author.name"
+                        >
+                            <img
+                                class="w-12 h-12 rounded-full shadow-lg object-cover"
+                                :src="authorDetails(author).img"
+                                alt="Bonnie image"
+                            />
+                            <p>{{ authorDetails(author).name }}</p>
+                        </div>
+                        <div class="m-4">
+                            <p class="text-sm dark:text-gray-400">
+                                {{ formatDate(article.updatedAt) }}
+                            </p>
                         </div>
                     </div>
-                </nuxt-link>
+
+                </div>
+
             </div>
         </div>
         <!-- All articles  -->
