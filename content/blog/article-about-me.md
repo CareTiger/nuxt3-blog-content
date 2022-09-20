@@ -4,7 +4,9 @@ description: This is a description for the article about me
 img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
 alt: nice image
 author:
-    - Peter
+    name: Peter
+    bio: All about Peter and what he does and where he works
+    img: https://images.unsplash.com/photo-1533636721434-0e2d61030955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
 tags:
     - web development
 createdAt: 2022-01-15

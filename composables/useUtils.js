@@ -1,7 +1,4 @@
-export default async() => {
-    const authors = await queryContent("blog/authors").find();
-    const tags = await queryContent("blog/tags").find();
-
+export default () => {
     const getFormattedDate = (date) => {
         console.log(date);
         return new Date(date).toLocaleDateString("en-gb", {
@@ -12,11 +9,13 @@ export default async() => {
         });
     };
 
-    const authorDetails = (author) => {
+    const authorDetails = async (author) => {
+        const authors = await queryContent("blog/authors").find();
         return authors.find(({ name }) => name === author);
     };
 
-    const tagDetails = (tag) => {
+    const tagDetails = async (tag) => {
+        const tags = await queryContent("blog/tags").find();
         return tags.find(({ name }) => name === tag);
     };
 
@@ -24,6 +23,5 @@ export default async() => {
         getFormattedDate,
         tagDetails,
         authorDetails,
-
-    }
-}
+    };
+};

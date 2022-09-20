@@ -1,17 +1,20 @@
 ---
-title: My Second Blog Post
+title: My Third Blog Post
 description: Learning how to use @nuxt/content to create a blog
-img: https://images.unsplash.com/photo-1588432415392-51f6e1a61d5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
-alt: my second blog post
+img: https://images.unsplash.com/photo-1588010986054-727675e6f36a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
+alt: my third blog post
 author:
-    - Maria
+    name: Alexandra
+    bio: All about Alexandra and where she works and what she does
+    img: https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
 tags:
-    - nuxtjs
-createdAt: 2022-06-15
-updatedAt: 2022-06-15
+    - javascript
+    - web development
+createdAt: 2022-07-15
+updatedAt: 2022-07-15
 ---
 
-# Welcome to my second blog post using content module
+## Welcome to my third blog post using content module
 
 ## This is a heading
 
